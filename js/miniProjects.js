@@ -5,25 +5,40 @@ let checkOutput = document.getElementById('paycheckAmountOutput');
 let gradeOutput = document.getElementById('percentGradeOutput');
 let gasOutput = document.getElementById('gasCostOutput')
 
-let tipBtn = document.getElementById("tipButton");
-tipBtn.addEventListener('click', function(){
-    //Tip Calculator Variables
-    let subTotal = document.getElementById('subTotalInput').valueAsNumber;
-    let percentage = document.getElementById('percentageInput').valueAsNumber;
-    let tipAmount;
-    let totalBill;
+let dieBtn = document.getElementById("dieButton");
+dieBtn.addEventListener('click', function () {
 
-    //Do The Math
-    tipAmount = subTotal * percentage;
-    totalBill = subTotal + tipAmount;
 
-    //Only Show 2 Decimal Places
-    tipAmount = tipAmount.toFixed(2);
-    totalBill = subTotal.toFixed(2);
 
-    //Show The Output
-    tipAmount.innerHTML = "$" + tipAmount;
-    totalOutput.innerHTML = "$" + totalBill;
+
+    // Gas Cost Calculator Variables
+    let numberRolled;
+
+
+
+
+    // Do the math
+    numberRolled = Math.floor(Math.random() * 6 + 1);
+
+
+
+
+    // Only show 2 decimal places
+    numberRolled = Math.floor(numberRolled)
+
+
+
+
+    // Show the output
+    diceOutput.innerHTML = numberRolled;
+
+
+
+
 })
 
-let paycheckBtn = document.getElementById("paycheckButton");
+
+
+
+
+
